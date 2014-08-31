@@ -1,0 +1,16 @@
+name             'chef-pdns'
+maintainer       'SiruS'
+maintainer_email 'https://github.com/podwhitehawk'
+license          'All rights reserved'
+description      'Installs/Configures chef-pdns'
+long_description 'Installs/Configures chef-pdns'
+version          '0.1.0'
+
+depends 'apt'
+depends 'yum'
+depends 'yum-epel'
+depends 'mysql'
+depends 'database'
+
+supports 'centos'
+supports 'ubuntu'
