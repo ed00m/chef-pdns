@@ -9,7 +9,7 @@ version          '0.1.0'
 depends 'apt'
 depends 'yum'
 depends 'yum-epel'
-depends 'mysql'
+depends 'mysql', '= 5.4.4'
 depends 'database'
 
 supports 'centos'

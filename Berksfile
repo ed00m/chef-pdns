@@ -5,5 +5,5 @@ metadata
 cookbook "apt"
 cookbook "yum"
 cookbook "yum-epel"
-cookbook "mysql"
+cookbook "mysql", '= 5.4.4'
 cookbook "database"
