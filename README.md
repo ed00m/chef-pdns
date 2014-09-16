@@ -1,4 +1,5 @@
 # chef-pdns-cookbook
+[![Build Status](https://secure.travis-ci.org/podwhitehawk/chef-pdns.png?branch=master)](http://travis-ci.org/podwhitehawk/chef-pdns)
 
 Simple cookbook to bring up powerdns with mysql backend.
 
