@@ -24,15 +24,16 @@ package "pdns-backend-mysql" do
 	action :install
 end
 
-template "#{node["chef-pdns"]["server"]["config-dir"]}/pdns.conf" do
-  source "pdns.conf.erb"
-  owner node["chef-pdns"]["server"]["setuid"]
-  group node["chef-pdns"]["server"]["setgid"]
-  mode 0640
+service "pdns" do
+  action :stop
+  only_if { platform_family?("debian") }
 end
 
-service "pdns" do
-  action [:enable, :start]
+directory "cleanup_pdns_example" do
+  path "#{node["chef-pdns"]["server"]["config-dir"]}/pdns.d"
+  recursive true
+  action :delete
+  only_if { platform_family?("debian") }
 end
 
 # setup mysql connection

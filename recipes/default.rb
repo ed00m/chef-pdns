@@ -32,13 +32,13 @@ end
 
 if node["chef-pdns"]["mysql_backend"]["enable"]
   include_recipe "chef-pdns::mysql-backend"
-else
-  template "#{node["chef-pdns"]["server"]["config-dir"]}/pdns.conf" do
-	  source "pdns.conf.erb"
-	  owner node["chef-pdns"]["server"]["setuid"]
-	  group node["chef-pdns"]["server"]["setgid"]
-	  mode 0640
-	end
+end
+
+template "#{node["chef-pdns"]["server"]["config-dir"]}/pdns.conf" do
+  source "pdns.conf.erb"
+  owner node["chef-pdns"]["server"]["setuid"]
+  group node["chef-pdns"]["server"]["setgid"]
+  mode 0640
 end
 
 service "pdns" do
