@@ -23,6 +23,8 @@ Tested and runs on:
 - Ubuntu 12.04
 - Ubuntu 14.04
 - CentOS 6.5
+- Debian 6
+- Debian 7
 
 ## Attributes
 -----
